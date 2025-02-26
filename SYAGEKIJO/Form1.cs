@@ -15,9 +15,24 @@ namespace SYAGEKIJO
         public Form1()
         {
             InitializeComponent();
+
+            // Starインスタンスの生成
+            Star star = new Star();
+            // Starの親コンテナはフォームに設定
+            star.Paint = this;
         }
 
+            //タイマーの設定
+            Timer timer = new Timer();
+            timer.Intevel = 1000;
+            timer.Tick += star.MoveEvent;
+            timer.Start();
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
