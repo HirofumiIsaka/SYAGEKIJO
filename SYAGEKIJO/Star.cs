@@ -17,8 +17,8 @@ namespace SYAGEKIJO
             BackColor = System.Drawing.Color.Yellow;
         }
 
-        // 落ちる処理
-        public void Drop()
+        // 動く処理
+        public void Move()
         {
             // PictureBoxのY座標（Topプロパティ）を更新
             Top += 10;
@@ -27,7 +27,7 @@ namespace SYAGEKIJO
         // イベントハンドラとして使用するためのラッパーメソッド
         internal void DropEvent(object sender, EventArgs e)
         {
-            Drop();
+            Move();
         }
     }
 }

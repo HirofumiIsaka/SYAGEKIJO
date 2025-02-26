@@ -52,6 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\SoundManager.cs" />
     <Compile Include="Star.cs">
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -86,6 +87,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gekijou_end_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syougatsu_daruma.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Sounds\loop1.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

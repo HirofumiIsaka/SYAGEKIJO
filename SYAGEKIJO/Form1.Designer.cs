@@ -38,7 +38,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.star)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Button1
@@ -81,9 +83,9 @@
             // star
             // 
             this.star.Image = ((System.Drawing.Image)(resources.GetObject("star.Image")));
-            this.star.Location = new System.Drawing.Point(222, 214);
+            this.star.Location = new System.Drawing.Point(196, 212);
             this.star.Name = "star";
-            this.star.Size = new System.Drawing.Size(100, 91);
+            this.star.Size = new System.Drawing.Size(100, 94);
             this.star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.star.TabIndex = 4;
             this.star.TabStop = false;
@@ -106,6 +108,15 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "得点";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(315, 213);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 94);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -114,6 +125,7 @@
             this.BackgroundImage = global::SYAGEKIJO.Properties.Resources.gekijou_end_blank;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(887, 450);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.star);
@@ -127,6 +139,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.star)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +155,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
