@@ -15,6 +15,12 @@ namespace SYAGEKIJO
 {
     public partial class Form1 : Form
     {
+
+        //タイマー間隔
+        private const int TimerInterval = 15;
+
+
+
         private WaveOutEvent outputDevice1;
 
         MediaPlayer player1;
@@ -22,14 +28,14 @@ namespace SYAGEKIJO
         public Form1()
         {
             InitializeComponent();
-           // audioFile1 = new AudioFileReader(@"Sounds\ks039.wav");
+            // audioFile1 = new AudioFileReader(@"Sounds\ks039.wav");
 
             // 出力デバイスの初期化
-           // outputDevice1 = new WaveOutEvent();
+            // outputDevice1 = new WaveOutEvent();
 
-            player1=new MediaPlayer();
+            player1 = new MediaPlayer();
             player1.Open(new Uri(@"Sounds\ks039.wav", UriKind.Relative));
-           // player1.Play();
+            // player1.Play();
 
             //タイマーの設定
             Timer timer = new Timer();
@@ -55,6 +61,12 @@ namespace SYAGEKIJO
             //    outputDevice1.Init(audioFile1);
             //    outputDevice1.Play();
             //}
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // プレイヤー1の停止
+            outputDevice1.Stop();
+
         }
     }
 }

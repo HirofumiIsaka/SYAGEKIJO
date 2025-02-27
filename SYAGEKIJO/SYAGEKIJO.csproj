@@ -162,6 +162,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\syageki_shooting_clay.png" />
     <Content Include="Sounds\ks039.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
