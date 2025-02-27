@@ -55,6 +55,7 @@
             this.Button1.TabIndex = 0;
             this.Button1.Text = "タイムスタート";
             this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
