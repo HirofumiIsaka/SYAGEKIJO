@@ -38,9 +38,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.daruma = new System.Windows.Forms.PictureBox();
+            this.oni = new System.Windows.Forms.PictureBox();
+            this.syougi = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.star)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daruma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oni)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syougi)).BeginInit();
             this.SuspendLayout();
             // 
             // Button1
@@ -51,7 +55,6 @@
             this.Button1.TabIndex = 0;
             this.Button1.Text = "タイムスタート";
             this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -90,6 +93,10 @@
             this.star.TabIndex = 4;
             this.star.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 70;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -108,15 +115,38 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "得点";
             // 
-            // pictureBox2
+            // daruma
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(315, 213);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 94);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.daruma.Image = ((System.Drawing.Image)(resources.GetObject("daruma.Image")));
+            this.daruma.Location = new System.Drawing.Point(315, 213);
+            this.daruma.Name = "daruma";
+            this.daruma.Size = new System.Drawing.Size(100, 94);
+            this.daruma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.daruma.TabIndex = 8;
+            this.daruma.TabStop = false;
+            // 
+            // oni
+            // 
+            this.oni.ErrorImage = global::SYAGEKIJO.Properties.Resources.setsubun_oni_kowai;
+            this.oni.Image = global::SYAGEKIJO.Properties.Resources.setsubun_oni_kowai;
+            this.oni.Location = new System.Drawing.Point(436, 213);
+            this.oni.Name = "oni";
+            this.oni.Size = new System.Drawing.Size(100, 96);
+            this.oni.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.oni.TabIndex = 9;
+            this.oni.TabStop = false;
+            // 
+            // syougi
+            // 
+            this.syougi.ErrorImage = ((System.Drawing.Image)(resources.GetObject("syougi.ErrorImage")));
+            this.syougi.Image = ((System.Drawing.Image)(resources.GetObject("syougi.Image")));
+            this.syougi.InitialImage = ((System.Drawing.Image)(resources.GetObject("syougi.InitialImage")));
+            this.syougi.Location = new System.Drawing.Point(576, 213);
+            this.syougi.Name = "syougi";
+            this.syougi.Size = new System.Drawing.Size(100, 96);
+            this.syougi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.syougi.TabIndex = 10;
+            this.syougi.TabStop = false;
             // 
             // Form1
             // 
@@ -126,7 +156,9 @@
             this.BackgroundImage = global::SYAGEKIJO.Properties.Resources.gekijou_end_blank;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(887, 450);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.syougi);
+            this.Controls.Add(this.oni);
+            this.Controls.Add(this.daruma);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.star);
@@ -138,9 +170,10 @@
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.star)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daruma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oni)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syougi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,7 +189,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox daruma;
+        private System.Windows.Forms.PictureBox oni;
+        private System.Windows.Forms.PictureBox syougi;
     }
 }
 

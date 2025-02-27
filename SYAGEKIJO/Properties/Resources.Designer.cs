@@ -69,5 +69,15 @@ namespace SYAGEKIJO.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap setsubun_oni_kowai {
+            get {
+                object obj = ResourceManager.GetObject("setsubun_oni_kowai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

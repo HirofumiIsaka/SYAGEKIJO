@@ -14,28 +14,23 @@ namespace SYAGEKIJO
     {
         public Form1()
         {
-            InitializeComponent(); 
+            InitializeComponent();
 
             //タイマーの設定
             Timer timer = new Timer();
-            timer.Interval = 200;
+            timer.Interval = 75;
             timer.Tick += MoveChr;
             timer.Start();
         }
 
         private void MoveChr(object sender, EventArgs e)
         {
-            star.Left += 130;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            star.Left += 10;
+            daruma.Left += 10;
+            oni.Left += 10;
+            syougi.Left += 10;
         }
     }
 }
+
+       
