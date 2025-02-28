@@ -68,6 +68,12 @@ namespace SYAGEKIJO
             outputDevice1.Stop();
 
         }
+        int remeinTime = 10;
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            time.Text = (remeinTime--).ToString();
+        }
     }
 }
 

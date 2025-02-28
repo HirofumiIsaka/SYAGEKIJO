@@ -35,13 +35,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.star = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.time = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.daruma = new System.Windows.Forms.PictureBox();
             this.oni = new System.Windows.Forms.PictureBox();
             this.syougi = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.star)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daruma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oni)).BeginInit();
@@ -91,19 +92,19 @@
             // 
             this.timer1.Interval = 70;
             // 
-            // label1
+            // time
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 212);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "残り時間";
+            this.time.AutoSize = true;
+            this.time.Location = new System.Drawing.Point(38, 212);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(61, 15);
+            this.time.TabIndex = 5;
+            this.time.Text = "残り時間";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(755, 212);
+            this.label2.Location = new System.Drawing.Point(755, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 6;
@@ -152,6 +153,13 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Move += new System.EventHandler(this.MoveChr);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -166,7 +174,7 @@
             this.Controls.Add(this.oni);
             this.Controls.Add(this.daruma);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.time);
             this.Controls.Add(this.star);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -192,13 +200,14 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox star;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label time;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox daruma;
         private System.Windows.Forms.PictureBox oni;
         private System.Windows.Forms.PictureBox syougi;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
