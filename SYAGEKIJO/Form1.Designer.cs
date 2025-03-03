@@ -1,6 +1,6 @@
 ﻿namespace SYAGEKIJO
 {
-    partial class MainForm
+    partial class Form1
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.star = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.time = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.daruma = new System.Windows.Forms.PictureBox();
             this.oni = new System.Windows.Forms.PictureBox();
             this.syougi = new System.Windows.Forms.PictureBox();
-            this.player = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.star)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daruma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oni)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.syougi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Button1
@@ -71,7 +71,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(302, 26);
+            this.button3.Location = new System.Drawing.Point(297, 24);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 60);
             this.button3.TabIndex = 2;
@@ -95,13 +95,20 @@
             // time
             // 
             this.time.AutoSize = true;
-            this.time.BackColor = System.Drawing.Color.White;
-            this.time.Font = new System.Drawing.Font("MS UI Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.time.Location = new System.Drawing.Point(37, 89);
+            this.time.Location = new System.Drawing.Point(38, 212);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(135, 33);
+            this.time.Size = new System.Drawing.Size(61, 15);
             this.time.TabIndex = 5;
             this.time.Text = "残り時間";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(755, 202);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "得点";
             // 
             // daruma
             // 
@@ -136,17 +143,17 @@
             this.syougi.TabIndex = 10;
             this.syougi.TabStop = false;
             // 
-            // player
+            // pictureBox1
             // 
-            this.player.BackColor = System.Drawing.Color.White;
-            this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
-            this.player.Location = new System.Drawing.Point(350, 356);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(100, 61);
-            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.player.TabIndex = 11;
-            this.player.TabStop = false;
-            this.player.Move += new System.EventHandler(this.MoveChr);
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(414, 354);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Move += new System.EventHandler(this.MoveChr);
             // 
             // timer2
             // 
@@ -154,18 +161,7 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(296, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 33);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "得点";
-            // 
-            // MainForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,25 +169,25 @@
             this.BackgroundImage = global::SYAGEKIJO.Properties.Resources.gekijou_end_blank;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(887, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.player);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.syougi);
             this.Controls.Add(this.oni);
             this.Controls.Add(this.daruma);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.time);
             this.Controls.Add(this.star);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Button1);
             this.DoubleBuffered = true;
-            this.Name = "MainForm";
+            this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.star)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.daruma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oni)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.syougi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,13 +201,13 @@
         private System.Windows.Forms.PictureBox star;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label time;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox daruma;
         private System.Windows.Forms.PictureBox oni;
         private System.Windows.Forms.PictureBox syougi;
-        private System.Windows.Forms.PictureBox player;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label label2;
     }
 }
 
