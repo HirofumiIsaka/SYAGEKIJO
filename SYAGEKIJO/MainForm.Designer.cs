@@ -36,7 +36,7 @@
             this.star = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.time = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.score = new System.Windows.Forms.Label();
             this.daruma = new System.Windows.Forms.PictureBox();
             this.oni = new System.Windows.Forms.PictureBox();
             this.syougi = new System.Windows.Forms.PictureBox();
@@ -95,20 +95,24 @@
             // time
             // 
             this.time.AutoSize = true;
-            this.time.Location = new System.Drawing.Point(38, 212);
+            this.time.BackColor = System.Drawing.Color.White;
+            this.time.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.time.Location = new System.Drawing.Point(38, 98);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(61, 15);
+            this.time.Size = new System.Drawing.Size(122, 30);
             this.time.TabIndex = 5;
             this.time.Text = "残り時間";
             // 
-            // label2
+            // score
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(755, 202);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "得点";
+            this.score.AutoSize = true;
+            this.score.BackColor = System.Drawing.Color.White;
+            this.score.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.score.Location = new System.Drawing.Point(202, 98);
+            this.score.Name = "score";
+            this.score.Size = new System.Drawing.Size(73, 30);
+            this.score.TabIndex = 5;
+            this.score.Text = "得点";
             // 
             // daruma
             // 
@@ -161,7 +165,7 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,14 +177,14 @@
             this.Controls.Add(this.syougi);
             this.Controls.Add(this.oni);
             this.Controls.Add(this.daruma);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.score);
             this.Controls.Add(this.time);
             this.Controls.Add(this.star);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Button1);
             this.DoubleBuffered = true;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.star)).EndInit();
@@ -201,7 +205,7 @@
         private System.Windows.Forms.PictureBox star;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label time;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label score;
         private System.Windows.Forms.PictureBox daruma;
         private System.Windows.Forms.PictureBox oni;
         private System.Windows.Forms.PictureBox syougi;

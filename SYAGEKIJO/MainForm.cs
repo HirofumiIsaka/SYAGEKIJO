@@ -68,7 +68,8 @@ namespace SYAGEKIJO
             outputDevice1.Stop();
 
         }
-        int remeinTime = 10;
+        int remeinTime = 120;
+        int score = 1;
 
         private void timer2_Tick(object sender, EventArgs e)
         {
