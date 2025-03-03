@@ -68,12 +68,12 @@ namespace SYAGEKIJO
             outputDevice1.Stop();
 
         }
-        int remeinTime = 120;
+        int remainTime = 120;
         int score = 1;
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            time.Text = (remeinTime--).ToString();
+            time.Text = (remainTime--).ToString();
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -91,9 +91,13 @@ namespace SYAGEKIJO
                 if (pictureBox1.Bottom + moveSpeed <= this.ClientSize.Height)
                     pictureBox1.Top += moveSpeed;
             }
-        }
+            
 
+            //
+        }
     }
+
+    
 }
 
       
