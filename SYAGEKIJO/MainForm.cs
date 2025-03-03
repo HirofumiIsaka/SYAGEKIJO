@@ -75,6 +75,24 @@ namespace SYAGEKIJO
         {
             time.Text = (remeinTime--).ToString();
         }
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            int moveSpeed = 15; // 移動量の調整
+
+            if (e.KeyCode == Keys.Up)
+            {
+                // 画面上端を越えないように移動
+                if (pictureBox1.Top- moveSpeed >= 0)
+                    pictureBox1.Top-= moveSpeed;
+            }
+            else if (e.KeyCode == Keys.Right)
+            {
+                // 画面下端を越えないように移動
+                if (pictureBox1.Bottom + moveSpeed <= this.ClientSize.Height)
+                    pictureBox1.Top += moveSpeed;
+            }
+        }
+
     }
 }
 
