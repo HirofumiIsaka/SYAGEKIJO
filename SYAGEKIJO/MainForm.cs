@@ -13,7 +13,7 @@ using NAudio.Wave;
 
 namespace SYAGEKIJO
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
 
         //タイマー間隔
@@ -25,7 +25,7 @@ namespace SYAGEKIJO
 
         MediaPlayer player1;
         private AudioFileReader audioFile1;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             // audioFile1 = new AudioFileReader(@"Sounds\ks039.wav");
