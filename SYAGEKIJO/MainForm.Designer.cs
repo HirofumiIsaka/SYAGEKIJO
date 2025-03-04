@@ -39,14 +39,14 @@
             this.daruma = new System.Windows.Forms.PictureBox();
             this.oni = new System.Windows.Forms.PictureBox();
             this.syougi = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Hunter = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.star)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daruma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oni)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.syougi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hunter)).BeginInit();
             this.SuspendLayout();
             // 
             // Button1
@@ -102,10 +102,6 @@
             this.time.TabIndex = 5;
             this.time.Text = "残り時間";
             // 
-            // score
-            // 
-           
-            // 
             // daruma
             // 
             this.daruma.Image = ((System.Drawing.Image)(resources.GetObject("daruma.Image")));
@@ -139,17 +135,17 @@
             this.syougi.TabIndex = 10;
             this.syougi.TabStop = false;
             // 
-            // pictureBox1
+            // Hunter
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(414, 354);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Move += new System.EventHandler(this.MoveChr);
+            this.Hunter.BackColor = System.Drawing.Color.White;
+            this.Hunter.Image = ((System.Drawing.Image)(resources.GetObject("Hunter.Image")));
+            this.Hunter.Location = new System.Drawing.Point(414, 354);
+            this.Hunter.Name = "Hunter";
+            this.Hunter.Size = new System.Drawing.Size(100, 61);
+            this.Hunter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Hunter.TabIndex = 11;
+            this.Hunter.TabStop = false;
+            this.Hunter.Move += new System.EventHandler(this.MoveChr);
             // 
             // timer2
             // 
@@ -165,25 +161,26 @@
             this.BackgroundImage = global::SYAGEKIJO.Properties.Resources.gekijou_end_blank;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(887, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Hunter);
             this.Controls.Add(this.syougi);
             this.Controls.Add(this.oni);
             this.Controls.Add(this.daruma);
-           ;
             this.Controls.Add(this.time);
             this.Controls.Add(this.star);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Button1);
             this.DoubleBuffered = true;
+            this.KeyPreview = true;
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.star)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.daruma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oni)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.syougi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hunter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,7 +198,7 @@
         private System.Windows.Forms.PictureBox daruma;
         private System.Windows.Forms.PictureBox oni;
         private System.Windows.Forms.PictureBox syougi;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Hunter;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Timer timer2;
     }

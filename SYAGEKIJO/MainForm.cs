@@ -50,6 +50,7 @@ namespace SYAGEKIJO
             daruma.Left += 10;
             oni.Left += 10;
             syougi.Left += 10;
+           
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -77,19 +78,19 @@ namespace SYAGEKIJO
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            int moveSpeed = 15; // 移動量の調整
+            int moveSpeed = 10; // 移動量の調整
 
             if (e.KeyCode == Keys.Up)
             {
                 // 画面上端を越えないように移動
-                if (pictureBox1.Top- moveSpeed >= 0)
-                    pictureBox1.Top-= moveSpeed;
+                if (Hunter.Top- moveSpeed >= 0)
+                    Hunter.Top-= moveSpeed;
             }
             else if (e.KeyCode == Keys.Right)
             {
                 // 画面下端を越えないように移動
-                if (pictureBox1.Bottom + moveSpeed <= this.ClientSize.Height)
-                    pictureBox1.Top += moveSpeed;
+                if (Hunter.Bottom + moveSpeed <= this.ClientSize.Height)
+                    Hunter.Top += moveSpeed;
             }
             
 

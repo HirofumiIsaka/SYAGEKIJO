@@ -105,6 +105,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="player.cs" />
     <Compile Include="Properties\SoundManager.cs" />
     <Compile Include="Star.cs">
       <SubType>Component</SubType>
