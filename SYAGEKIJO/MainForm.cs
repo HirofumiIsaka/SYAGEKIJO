@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
-using NAudio.Wave; 
+using NAudio.Wave;
 
 namespace SYAGEKIJO
 {
@@ -54,19 +54,20 @@ namespace SYAGEKIJO
             oni.Left += 10;
             syougi.Left += 10;
 
-            if(star.Right > this.ClientSize.Width)
+            if (star.Right > this.ClientSize.Width)
+            {
+                // ResetFallingObject();   // 移動の座標をリセット
+                star.Left = 0;
+            }
+            if (daruma.Right > this.ClientSize.Width)
             {
                 ResetFallingObject();
             }
-            if(daruma.Right > this.ClientSize.Width)
-            { 
+            if (oni.Right > this.ClientSize.Width)
+            {
                 ResetFallingObject();
             }
-            if(oni.Right > this.ClientSize.Width)
-            { 
-                ResetFallingObject();
-            }
-            if(syougi.Right > this.ClientSize.Width)
+            if (syougi.Right > this.ClientSize.Width)
             {
                 ResetFallingObject();
             }
@@ -75,28 +76,30 @@ namespace SYAGEKIJO
         }
         private void ResetFallingObject()
         {
-            // 移動の座標をリセット
-           
+
 
 
             // X座標は画面幅内のランダムな位置に配置
             Random rnd = new Random();
         }
-       
-            private void CheckCollision()
-            {
-            if(star.Bounds.IntersectsWith(this.Bounds))
-            if(daruma.Bounds.IntersectsWith(this.Bounds))
-            {
 
+        bool isStarAlive = true;
+
+        private void CheckCollision()
+        {
+            if (isStarAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
+            {
+                //star.Visible =  false;
+                isStarAlive = false;
+                Controls.Remove(star);
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
                 MessageBox.Show("得点加算！");
             }
-            
+
         }
 
-        
+
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -115,7 +118,7 @@ namespace SYAGEKIJO
 
         }
         int remainTime = 120;
-        
+
 
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -155,7 +158,7 @@ namespace SYAGEKIJO
         }
     }
 
-    
+
 }
 
-      
+
