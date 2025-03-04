@@ -49,10 +49,10 @@ namespace SYAGEKIJO
 
         private void MoveChr(object sender, EventArgs e)
         {
-            star.Left += 30;
-            daruma.Left += 30;
-            oni.Left += 10;
-            syougi.Left += 10;
+            star.Left += 80;
+            daruma.Left += 150;
+            oni.Left += 100;
+            syougi.Left += 60;
 
             if (star.Right > this.ClientSize.Width)
             {
@@ -88,6 +88,8 @@ namespace SYAGEKIJO
 
         bool isStarAlive = true;
         bool isDarumaAlive = true;
+        bool isOniAlive = true;
+        bool isSyougiAlive = true;
 
         private void CheckCollision()
         {
@@ -99,7 +101,7 @@ namespace SYAGEKIJO
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
-                MessageBox.Show("得点加算！");
+                MessageBox.Show("射撃成功！");
             }
             if (isDarumaAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
             {
@@ -109,8 +111,27 @@ namespace SYAGEKIJO
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
-                MessageBox.Show("得点加算！");
+                MessageBox.Show("射撃成功！");
+            }
+            if (isOniAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
+            {
+                //star.Visible =  false;
+                isOniAlive = false;
+                Controls.Remove(oni);
 
+                // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
+                ResetFallingObject();
+                MessageBox.Show("射撃失敗！");
+            }
+            if (isSyougiAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
+            {
+                //star.Visible =  false;
+                isSyougiAlive = false;
+                Controls.Remove(syougi);
+
+                // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
+                ResetFallingObject();
+                MessageBox.Show("射撃失敗！");
             }
         }
 
