@@ -61,15 +61,18 @@ namespace SYAGEKIJO
             }
             if (daruma.Right > this.ClientSize.Width)
             {
-                ResetFallingObject();
+                //ResetFallingObject();
+                daruma.Left = 0;
             }
             if (oni.Right > this.ClientSize.Width)
             {
-                ResetFallingObject();
+                //ResetFallingObject();
+                oni.Left= 0;
             }
             if (syougi.Right > this.ClientSize.Width)
             {
-                ResetFallingObject();
+                //ResetFallingObject();
+                syougi.Left = 0;
             }
             // 衝突判定を実施
             CheckCollision();
