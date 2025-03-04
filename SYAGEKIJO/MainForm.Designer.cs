@@ -36,7 +36,6 @@
             this.star = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.time = new System.Windows.Forms.Label();
-            this.score = new System.Windows.Forms.Label();
             this.daruma = new System.Windows.Forms.PictureBox();
             this.oni = new System.Windows.Forms.PictureBox();
             this.syougi = new System.Windows.Forms.PictureBox();
@@ -105,14 +104,7 @@
             // 
             // score
             // 
-            this.score.AutoSize = true;
-            this.score.BackColor = System.Drawing.Color.White;
-            this.score.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.score.Location = new System.Drawing.Point(202, 98);
-            this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(73, 30);
-            this.score.TabIndex = 5;
-            this.score.Text = "得点";
+           
             // 
             // daruma
             // 
@@ -177,7 +169,7 @@
             this.Controls.Add(this.syougi);
             this.Controls.Add(this.oni);
             this.Controls.Add(this.daruma);
-            this.Controls.Add(this.score);
+           ;
             this.Controls.Add(this.time);
             this.Controls.Add(this.star);
             this.Controls.Add(this.button3);
@@ -205,7 +197,7 @@
         private System.Windows.Forms.PictureBox star;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label time;
-        private System.Windows.Forms.Label score;
+        
         private System.Windows.Forms.PictureBox daruma;
         private System.Windows.Forms.PictureBox oni;
         private System.Windows.Forms.PictureBox syougi;
