@@ -76,25 +76,37 @@ namespace SYAGEKIJO
         {
             time.Text = (remainTime--).ToString();
         }
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            int moveSpeed = 10; // 移動量の調整
 
-            if (e.KeyCode == Keys.Up)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            const int moveSpeed = 10;
+
+            if (keyData == Keys.Up)
             {
-                // 画面上端を越えないように移動
-                if (Hunter.Top- moveSpeed >= 0)
-                    Hunter.Top-= moveSpeed;
+                if (Hunter.Top - moveSpeed >= 0)
+                    Hunter.Top -= moveSpeed;
+                return true;
             }
-            else if (e.KeyCode == Keys.Right)
+            else if (keyData == Keys.Down)
             {
-                // 画面下端を越えないように移動
                 if (Hunter.Bottom + moveSpeed <= this.ClientSize.Height)
                     Hunter.Top += moveSpeed;
+                return true;
             }
-            
+            else if (keyData == Keys.Left)
+            {
+                if (Hunter.Left - moveSpeed >= 0)
+                    Hunter.Left -= moveSpeed;
+                return true;
+            }
+            else if (keyData == Keys.Right)
+            {
+                if (Hunter.Right + moveSpeed <= this.ClientSize.Width)
+                    Hunter.Left += moveSpeed;
+                return true;
+            }
 
-            //
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 
