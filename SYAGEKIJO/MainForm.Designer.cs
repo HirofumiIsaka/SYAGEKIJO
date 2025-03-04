@@ -175,7 +175,6 @@
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Form1";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.star)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.daruma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oni)).EndInit();

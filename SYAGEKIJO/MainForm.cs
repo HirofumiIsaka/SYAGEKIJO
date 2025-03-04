@@ -50,8 +50,50 @@ namespace SYAGEKIJO
             daruma.Left += 10;
             oni.Left += 10;
             syougi.Left += 10;
-           
+
+            if(star.Right > this.ClientSize.Width)
+            {
+                ResetFallingObject();
+            }
+            if(daruma.Right > this.ClientSize.Width)
+            { 
+                ResetFallingObject();
+            }
+            if(oni.Right > this.ClientSize.Width)
+            { 
+                ResetFallingObject();
+            }
+            if(syougi.Right > this.ClientSize.Width)
+            {
+                ResetFallingObject();
+            }
+            // 衝突判定を実施
+            CheckCollision();
         }
+        private void ResetFallingObject()
+        {
+            // 移動の座標をリセット
+           
+
+
+            // X座標は画面幅内のランダムな位置に配置
+            Random rnd = new Random();
+        }
+       
+            private void CheckCollision()
+            {
+            if(star.Bounds.IntersectsWith(this.Bounds))
+            if(daruma.Bounds.IntersectsWith(this.Bounds))
+            {
+
+                // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
+                ResetFallingObject();
+                MessageBox.Show("得点加算！");
+            }
+            
+        }
+
+        
 
         private void Button1_Click(object sender, EventArgs e)
         {
