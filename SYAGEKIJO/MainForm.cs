@@ -49,8 +49,8 @@ namespace SYAGEKIJO
 
         private void MoveChr(object sender, EventArgs e)
         {
-            star.Left += 10;
-            daruma.Left += 10;
+            star.Left += 30;
+            daruma.Left += 30;
             oni.Left += 10;
             syougi.Left += 10;
 
@@ -87,6 +87,7 @@ namespace SYAGEKIJO
         }
 
         bool isStarAlive = true;
+        bool isDarumaAlive = true;
 
         private void CheckCollision()
         {
@@ -95,11 +96,22 @@ namespace SYAGEKIJO
                 //star.Visible =  false;
                 isStarAlive = false;
                 Controls.Remove(star);
+
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
                 MessageBox.Show("得点加算！");
             }
+            if (isDarumaAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
+            {
+                //star.Visible =  false;
+                isDarumaAlive = false;
+                Controls.Remove(daruma);
 
+                // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
+                ResetFallingObject();
+                MessageBox.Show("得点加算！");
+
+            }
         }
 
 
