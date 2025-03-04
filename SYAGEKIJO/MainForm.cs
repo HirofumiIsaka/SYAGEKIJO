@@ -15,9 +15,12 @@ namespace SYAGEKIJO
 {
     public partial class MainForm : Form
     {
-
+        // ゲーム状態とスコア
+        private int score = 0;
+        private bool isGameOver = false;
         //タイマー間隔
         private const int TimerInterval = 15;
+        private Timer gameTimer;
 
 
 
@@ -112,7 +115,7 @@ namespace SYAGEKIJO
 
         }
         int remainTime = 120;
-        int score = 1;
+        
 
         private void timer2_Tick(object sender, EventArgs e)
         {
