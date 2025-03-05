@@ -130,14 +130,14 @@ namespace SYAGEKIJO
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
                 //MessageBox.Show("射撃成功！");
-                UpdateScore(30);
+                UpdateScore(-30);
             }
             if (isOniAlive && oni.Bounds.IntersectsWith(Hunter.Bounds))
             {
                 //star.Visible =  false;
                 //isOniAlive = false;
                // Controls.Remove(oni);
-                UpdateScore(-50);
+                UpdateScore(-100);
 
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
@@ -149,7 +149,7 @@ namespace SYAGEKIJO
                 //syougi.Visible =  false;
                // isSyougiAlive = false;
                // Controls.Remove(syougi);
-                UpdateScore(-20);
+                UpdateScore(-40);
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
