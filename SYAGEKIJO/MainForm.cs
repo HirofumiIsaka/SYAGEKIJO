@@ -146,9 +146,9 @@ namespace SYAGEKIJO
             }
             if (isSyougiAlive && syougi.Bounds.IntersectsWith(Hunter.Bounds))
             {
-                //star.Visible =  false;
-                isSyougiAlive = false;
-                Controls.Remove(syougi);
+                //syougi.Visible =  false;
+               // isSyougiAlive = false;
+               // Controls.Remove(syougi);
                 UpdateScore(-10);
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
