@@ -15,14 +15,13 @@ namespace SYAGEKIJO
 {
     public partial class MainForm : Form
     {
-        // ゲーム状態とスコア
+        // ポイントを保持するフィールド
         private int score = 0;
+
         private bool isGameOver = false;
         //タイマー間隔
         private const int TimerInterval = 15;
         private Timer gameTimer;
-
-
 
         private WaveOutEvent outputDevice1;
 
@@ -30,6 +29,30 @@ namespace SYAGEKIJO
         private AudioFileReader audioFile1;
         public MainForm()
         {
+            InitializeComponent();
+
+
+            // 初期スコアをLabelに表示
+           scoreLabel.Text = scoreLabel.ToString();
+        }
+
+        // スコアを更新するメソッド
+        private void UpdateScore(int additionalPoints)
+        {
+            score += additionalPoints;
+            scoreLabel.Text += score.ToString();
+        }
+
+        // ボタンのクリックイベントハンドラー
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            // 星とダルマに攻撃したらごとに10ポイント追加
+           
+
+
+
+
+
             InitializeComponent();
             // audioFile1 = new AudioFileReader(@"Sounds\ks039.wav");
 
@@ -103,7 +126,7 @@ namespace SYAGEKIJO
                 ResetFallingObject();
                 MessageBox.Show("射撃成功！");
             }
-            if (isDarumaAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
+            if (isDarumaAlive && daruma.Bounds.IntersectsWith(Hunter.Bounds))
             {
                 //star.Visible =  false;
                 isDarumaAlive = false;
@@ -113,7 +136,7 @@ namespace SYAGEKIJO
                 ResetFallingObject();
                 MessageBox.Show("射撃成功！");
             }
-            if (isOniAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
+            if (isOniAlive && oni.Bounds.IntersectsWith(Hunter.Bounds))
             {
                 //star.Visible =  false;
                 isOniAlive = false;
@@ -123,7 +146,7 @@ namespace SYAGEKIJO
                 ResetFallingObject();
                 MessageBox.Show("射撃失敗！");
             }
-            if (isSyougiAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
+            if (isSyougiAlive && syougi.Bounds.IntersectsWith(Hunter.Bounds))
             {
                 //star.Visible =  false;
                 isSyougiAlive = false;
@@ -154,7 +177,7 @@ namespace SYAGEKIJO
 
         }
         int remainTime = 120;
-
+        
 
         private void timer2_Tick(object sender, EventArgs e)
         {
