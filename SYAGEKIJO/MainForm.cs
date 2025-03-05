@@ -59,9 +59,9 @@ namespace SYAGEKIJO
 
         private void MoveChr(object sender, EventArgs e)
         {
-            star.Left += 10;
+            star.Left += 20;
             daruma.Left += 20;
-            oni.Left += 20;
+            oni.Left += 10;
             syougi.Left += 10;
 
             if (star.Right > this.ClientSize.Width)
@@ -97,6 +97,10 @@ namespace SYAGEKIJO
 
             // X座標は画面幅内のランダムな位置に配置
             Random rnd = new Random();
+            star.Left = rnd.Next(0, this.ClientSize.Height - star.Height);
+            daruma.Left = rnd.Next(0,this.ClientSize.Height - daruma.Height);
+            oni.Left = rnd.Next(0,this.ClientSize.Height -  oni.Height);
+            syougi.Left =rnd.Next(0,this.ClientSize.Height- syougi.Height);
         }
 
         bool isStarAlive = true;
@@ -131,8 +135,8 @@ namespace SYAGEKIJO
             if (isOniAlive && oni.Bounds.IntersectsWith(Hunter.Bounds))
             {
                 //star.Visible =  false;
-                isOniAlive = false;
-                Controls.Remove(oni);
+                //isOniAlive = false;
+               // Controls.Remove(oni);
                 UpdateScore(-10);
 
 
