@@ -111,7 +111,7 @@ namespace SYAGEKIJO
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
-               // MessageBox.Show("射撃成功！");
+                MessageBox.Show("射撃成功！");
                 UpdateScore(10); 
             }
             if (isDarumaAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
@@ -122,7 +122,8 @@ namespace SYAGEKIJO
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
-              //  MessageBox.Show("射撃成功！");
+                MessageBox.Show("射撃成功！");
+                UpdateScore(10);
             }
             if (isOniAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
             {
