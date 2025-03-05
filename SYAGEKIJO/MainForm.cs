@@ -60,8 +60,8 @@ namespace SYAGEKIJO
         private void MoveChr(object sender, EventArgs e)
         {
             star.Left += 10;
-            daruma.Left += 10;
-            oni.Left += 10;
+            daruma.Left += 20;
+            oni.Left += 20;
             syougi.Left += 10;
 
             if (star.Right > this.ClientSize.Width)
@@ -89,8 +89,11 @@ namespace SYAGEKIJO
         }
         private void ResetFallingObject()
         {
-
-
+            // 景品リセット
+            star.Left= -star.Right;
+            daruma.Left= -daruma.Right;
+            oni.Left= -oni.Right;
+            syougi.Left= -syougi.Right;
 
             // X座標は画面幅内のランダムな位置に配置
             Random rnd = new Random();
