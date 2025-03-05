@@ -31,6 +31,10 @@ namespace SYAGEKIJO
         public MainForm()
         {
             InitializeComponent();
+
+            scoreLabel.Text = score.ToString();
+
+
             // audioFile1 = new AudioFileReader(@"Sounds\ks039.wav");
 
             // 出力デバイスの初期化
@@ -46,13 +50,19 @@ namespace SYAGEKIJO
             timer.Tick += MoveChr;
             timer.Start();
         }
+        // スコアを更新するメソッド
+        private void UpdateScore(int additionalPoints)
+        {
+            score += additionalPoints;
+            scoreLabel.Text = score.ToString();
+        }
 
         private void MoveChr(object sender, EventArgs e)
         {
-            star.Left += 80;
-            daruma.Left += 150;
-            oni.Left += 100;
-            syougi.Left += 60;
+            star.Left += 10;
+            daruma.Left += 10;
+            oni.Left += 10;
+            syougi.Left += 10;
 
             if (star.Right > this.ClientSize.Width)
             {
@@ -101,7 +111,8 @@ namespace SYAGEKIJO
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
-                MessageBox.Show("射撃成功！");
+               // MessageBox.Show("射撃成功！");
+                UpdateScore(10); 
             }
             if (isDarumaAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
             {
@@ -111,7 +122,7 @@ namespace SYAGEKIJO
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
-                MessageBox.Show("射撃成功！");
+              //  MessageBox.Show("射撃成功！");
             }
             if (isOniAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
             {
@@ -121,7 +132,7 @@ namespace SYAGEKIJO
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
-                MessageBox.Show("射撃失敗！");
+              //  MessageBox.Show("射撃失敗！");
             }
             if (isSyougiAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
             {
@@ -131,7 +142,7 @@ namespace SYAGEKIJO
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
-                MessageBox.Show("射撃失敗！");
+               // MessageBox.Show("射撃失敗！");
             }
         }
 

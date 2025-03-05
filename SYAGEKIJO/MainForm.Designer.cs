@@ -42,6 +42,7 @@
             this.Hunter = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.scoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.star)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daruma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oni)).BeginInit();
@@ -153,6 +154,17 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.BackColor = System.Drawing.Color.White;
+            this.scoreLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.scoreLabel.Location = new System.Drawing.Point(196, 98);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(84, 30);
+            this.scoreLabel.TabIndex = 12;
+            this.scoreLabel.Text = "label1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -161,6 +173,7 @@
             this.BackgroundImage = global::SYAGEKIJO.Properties.Resources.gekijou_end_blank;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(887, 450);
+            this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.Hunter);
             this.Controls.Add(this.syougi);
             this.Controls.Add(this.oni);
@@ -200,6 +213,7 @@
         private System.Windows.Forms.PictureBox Hunter;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Timer timer2;
+        protected internal System.Windows.Forms.Label scoreLabel;
     }
 }
 
