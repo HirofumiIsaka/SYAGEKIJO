@@ -113,31 +113,31 @@ namespace SYAGEKIJO
             if (isStarAlive && star.Bounds.IntersectsWith(Hunter.Bounds))
             {
                 //star.Visible =  false;
-                isStarAlive = false;
-                Controls.Remove(star);
+               // isStarAlive = false;
+               // Controls.Remove(star);
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
                // MessageBox.Show("射撃成功！");
-                UpdateScore(10); 
+                UpdateScore(50); 
             }
             if (isDarumaAlive && daruma.Bounds.IntersectsWith(Hunter.Bounds))
             {
                 //star.Visible =  false;
-                isDarumaAlive = false;
-                Controls.Remove(daruma);
+               // isDarumaAlive = false;
+               // Controls.Remove(daruma);
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
                 //MessageBox.Show("射撃成功！");
-                UpdateScore(10);
+                UpdateScore(30);
             }
             if (isOniAlive && oni.Bounds.IntersectsWith(Hunter.Bounds))
             {
                 //star.Visible =  false;
                 //isOniAlive = false;
                // Controls.Remove(oni);
-                UpdateScore(-10);
+                UpdateScore(-50);
 
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
@@ -149,7 +149,7 @@ namespace SYAGEKIJO
                 //syougi.Visible =  false;
                // isSyougiAlive = false;
                // Controls.Remove(syougi);
-                UpdateScore(-10);
+                UpdateScore(-20);
 
                 // 衝突時の処理（例：得点加算、メッセージ表示、落ち物の再配置など）
                 ResetFallingObject();
