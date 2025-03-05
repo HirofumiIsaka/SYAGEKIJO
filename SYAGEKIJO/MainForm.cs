@@ -59,10 +59,10 @@ namespace SYAGEKIJO
 
         private void MoveChr(object sender, EventArgs e)
         {
-            star.Left += 20;
-            daruma.Left += 20;
+            star.Left += 40;
+            daruma.Left += 30;
             oni.Left += 10;
-            syougi.Left += 10;
+            syougi.Left += 20;
 
             if (star.Right > this.ClientSize.Width)
             {
